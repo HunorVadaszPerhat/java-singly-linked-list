@@ -1,5 +1,5 @@
 public class SinglyLinkedList {
-    // The first node in the list
+    // The rerefence to first node in the list
     private Node head;
 
     public SinglyLinkedList() {
@@ -25,12 +25,11 @@ public class SinglyLinkedList {
         // check is list is empty
 		if(head == null)
 		{
+            // display message of empty list
 			System.out.println("List is empty");
+            //exit the method
 			return;
 		}
-
-		System.out.print("List is :   ");
-
         // set pointer to head
 		pointer = head;
 
@@ -39,7 +38,7 @@ public class SinglyLinkedList {
 		while(pointer != null)
 		{
             // print the value of the node
-			System.out.print(pointer.data + "  ");
+			System.out.print(pointer.data);
             // move to the next node
 			pointer = pointer.address;
 		}
@@ -68,6 +67,7 @@ public class SinglyLinkedList {
 		while(pointer.address != null)
 			pointer = pointer.address;
 		
+        // set the next node to the new node
 		pointer.address=newNode;
 	}
 
